@@ -21,5 +21,17 @@ namespace FindMaximumTest
             int maximum = findMaximum.IntegerMaximum(num1, num2, num3);
             Assert.AreEqual(expected, maximum);
         }
+
+        [Test]
+        public void GivenThreeFloats_ShouldReturnMaximum()
+        {
+            float expected = 15.23F;
+            float num1 = 12.6F,
+                num2 = 4.8F,
+                num3 = 15.23F;
+            Program findMaximum = new Program();
+            float maximum = findMaximum.FloatMaximum(num1, num2, num3);
+            Assert.AreEqual(expected, maximum);
+        }
     }
 }

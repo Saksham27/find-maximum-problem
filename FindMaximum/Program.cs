@@ -24,6 +24,25 @@ namespace FindMaximum
         }
 
         /// <summary>
+        /// method to find maximum of three integer numbers
+        /// </summary>
+        /// <param name="num1"> number 1 </param>
+        /// <param name="num2"> number 2 </param>
+        /// <param name="num3"> number 3 </param>
+        /// <returns> maximum number </returns>
+        public float FloatMaximum(float num1, float num2, float num3)
+        {
+            if (num1.CompareTo(num2) > 0)
+            {
+                return (num1.CompareTo(num3) > 0) ? num1 : num3;
+            }
+            else
+            {
+                return (num2.CompareTo(num3) > 0) ? num2 : num3;
+            }
+        }
+
+        /// <summary>
         /// main method
         /// </summary>
         /// <param name="args"></param>
