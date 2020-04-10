@@ -33,5 +33,17 @@ namespace FindMaximumTest
             float maximum = findMaximum.FloatMaximum(num1, num2, num3);
             Assert.AreEqual(expected, maximum);
         }
+
+        [Test]
+        public void GivenThreeStrings_ShouldReturnMaximum()
+        {
+            string expected = "Peter";
+            string str1 = "John",
+                str2 = "Peter",
+                str3 = "Angel";
+            Program findMaximum = new Program();
+            string maximum = findMaximum.StringMaximum(str1, str2, str3);
+            Assert.AreEqual(expected, maximum);
+        }
     }
 }

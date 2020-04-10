@@ -43,6 +43,25 @@ namespace FindMaximum
         }
 
         /// <summary>
+        /// method to find maximum of three integer numbers
+        /// </summary>
+        /// <param name="num1"> number 1 </param>
+        /// <param name="num2"> number 2 </param>
+        /// <param name="num3"> number 3 </param>
+        /// <returns> maximum number </returns>
+        public string StringMaximum(string str1, string str2, string str3)
+        {
+            if (str1.CompareTo(str2) > 0)
+            {
+                return (str1.CompareTo(str3) > 0) ? str1 : str3;
+            }
+            else
+            {
+                return (str2.CompareTo(str3) > 0) ? str2 : str3;
+            }
+        }
+
+        /// <summary>
         /// main method
         /// </summary>
         /// <param name="args"></param>
