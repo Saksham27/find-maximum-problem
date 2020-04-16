@@ -55,8 +55,8 @@ namespace FindMaximum
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
-            FindMaximum<int> findMax = new FindMaximum<int>(4, 6, 9);
-            findMax.TestMaximum();
+            FindMaximum<int> findMax = new FindMaximum<int>();
+            findMax.MaxMethod(3,4,8,1,60);
         }
     }
 
@@ -69,6 +69,11 @@ namespace FindMaximum
                     maxValue;
 
         /// <summary>
+        /// default constructor
+        /// </summary>
+        public FindMaximum() { }
+
+        /// <summary>
         /// contructor with three parameters
         /// </summary>
         /// <param name="value1"></param>
@@ -79,6 +84,15 @@ namespace FindMaximum
             this.value1 = value1;
             this.value2 = value2;
             this.value3 = value3;
+        }
+
+        public GenericType MaxMethod(params GenericType[] array)
+        {
+            int length = array.Length;
+            Array.Sort(array);
+            this.maxValue = array[array.Length-1];
+            PrintMax();
+            return this.maxValue;
         }
 
         public void PrintMax()
