@@ -8,6 +8,7 @@ namespace FindMaximumTest
         [SetUp]
         public void Setup()
         {
+            
         }
 
         [Test]

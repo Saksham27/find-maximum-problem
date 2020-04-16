@@ -55,7 +55,8 @@ namespace FindMaximum
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
-
+            FindMaximum<int> findMax = new FindMaximum<int>(4, 6, 9);
+            findMax.TestMaximum();
         }
     }
 
@@ -64,13 +65,25 @@ namespace FindMaximum
 
         GenericType value1,
                     value2,
-                    value3;
+                    value3,
+                    maxValue;
 
+        /// <summary>
+        /// contructor with three parameters
+        /// </summary>
+        /// <param name="value1"></param>
+        /// <param name="value2"></param>
+        /// <param name="value3"></param>
         public FindMaximum(GenericType value1, GenericType value2, GenericType value3)
         {
             this.value1 = value1;
             this.value2 = value2;
             this.value3 = value3;
+        }
+
+        public void PrintMax()
+        {
+            Console.WriteLine($"Maximum value : {this.maxValue}");
         }
 
         /// <summary>
@@ -83,9 +96,12 @@ namespace FindMaximum
         public GenericType TestMaximum()
         {
             if (value1.CompareTo(value2) > 0)
-                return (value1.CompareTo(value3) > 0) ? value1 : value3;
+                this.maxValue = (value1.CompareTo(value3) > 0) ? value1 : value3;
             else
-                return (value2.CompareTo(value3) > 0) ? value2 : value3;
+                this.maxValue = (value2.CompareTo(value3) > 0) ? value2 : value3;
+
+            PrintMax();
+            return maxValue;
         }
   
     }
