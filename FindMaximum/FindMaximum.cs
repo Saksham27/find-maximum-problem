@@ -66,6 +66,12 @@ namespace FindMaximum
                     value2,
                     value3;
 
+        public FindMaximum(GenericType value1, GenericType value2, GenericType value3)
+        {
+            this.value1 = value1;
+            this.value2 = value2;
+            this.value3 = value3;
+        }
 
         /// <summary>
         /// method to find maximum of three Generic type numbers
@@ -74,7 +80,7 @@ namespace FindMaximum
         /// <param name="value2"></param>
         /// <param name="value3"></param>
         /// <returns> maximum </returns>
-        public GenericType TestMaximum(GenericType value1, GenericType value2, GenericType value3)
+        public GenericType TestMaximum()
         {
             if (value1.CompareTo(value2) > 0)
                 return (value1.CompareTo(value3) > 0) ? value1 : value3;

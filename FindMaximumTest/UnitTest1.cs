@@ -53,8 +53,8 @@ namespace FindMaximumTest
             int num1 = 4,
                 num2 = 9,
                 num3 = 6;
-            FindMaximum<int> findMaximum = new FindMaximum<int>();
-            int maximum = findMaximum.TestMaximum(num1, num2, num3);
+            FindMaximum<int> findMaximum = new FindMaximum<int>(num1,num2,num3);
+            int maximum = findMaximum.TestMaximum();
             Assert.AreEqual(expected, maximum);
         }
     }
